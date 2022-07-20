@@ -11,6 +11,7 @@ class Player(Entity):
         self.rect = self.image.get_rect(topleft=pos)
         self.obstacle_sprites = obstacle_sprites
         self.hitbox = self.rect.inflate(-6, HITBOX_OFFSET['player'])
+        self.is_dead = False
 
         # graphics setup
         self.import_player_assets()
@@ -54,7 +55,9 @@ class Player(Entity):
 
         # import a sound
         self.weapon_attack_sound = pygame.mixer.Sound('../audio/sword.wav')
+        self.death_sound = pygame.mixer.Sound('../audio/death.wav')
         self.weapon_attack_sound.set_volume(0.2)
+        self.death_sound.set_volume(0.2)
 
     def import_player_assets(self) -> None:
         character_path = '../graphics/player/'
@@ -213,6 +216,12 @@ class Player(Entity):
         else:
             self.energy = self.stats['energy']
 
+    def check_death(self) -> None:
+        if self.health <= 0:
+            self.death_sound.play()
+            self.kill()
+            self.is_dead = True
+
     def update(self) -> None: 
         # update and draw the game
         self.input()
@@ -221,4 +230,5 @@ class Player(Entity):
         self.animate()
         self.move(self.stats['speed'])
         self.energy_recovery()
+        self.check_death()
 

@@ -4,7 +4,7 @@ from random import choice, randint
 from enemy import Enemy
 from ui import UI
 from support import import_csv_layout, import_folder
-from settings import TILESIZE
+from settings import *
 from tile import Tile
 from player import Player
 from weapon import Weapon
@@ -148,6 +148,13 @@ class Level:
         self.ui.display(self.player)
         if self.game_paused:
             self.upgrade.display()
+        elif self.player.is_dead:
+            surface = pygame.display.get_surface()
+            font = pygame.font.Font(UI_FONT, 65)
+            rect = pygame.Rect(surface.get_size()[0]//2, surface.get_size()[1]//2, 15, 157)
+            title_surf = font.render('GAME OVER', False, 'orange', 'black')
+            title_rect = title_surf.get_rect(center=rect.center - pygame.math.Vector2(0, 75))
+            surface.blit(title_surf, title_rect)
         else:
             self.visible_sprites.update()
             self.visible_sprites.enemy_update(self.player)
