@@ -21,7 +21,7 @@ If you ask me then no, but in reality? still no.
 This game is in no way meant to compete against all the triple A titles around the globe. (*and frankly I love my sanity way too much to do it*) It is a simple piece of code to learn how to use pygame.
 
 ## Will I enjoy playing the game?
-If you like Zelda style games then possibly yes but if you think you value your time more than this then I think there is a slight chane that may not *like* it.
+If you like Zelda style games then possibly yes but if you think you value your time more than this then I think there is a slight chance that you may not *like* it.
 
 ## Can I expect an update in future?
 No
