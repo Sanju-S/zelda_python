@@ -31,8 +31,8 @@ Just like in real life, you have to survive in the map against various enemies w
 * Press `V` to use your magic.
 * Press `E` to toggle between various magics. (currently 2)
 * Press `M` to toggle Menu. (and pause the game \**of course*\*)
-* Move around the menu with `LEFT` and `RIGHT` arrow keys.
-* Press `SPACE` to upgrade the selected stat. (It will cost you experience and can be seen on the screen)
+  * Move around the menu with `LEFT` and `RIGHT` arrow keys.
+  * Press `SPACE` to upgrade the selected stat. (It will cost you experience and can be seen on the screen)
 
 ## Is it the best game out there in the wild?
 If you ask me then no, but in reality? still no.
